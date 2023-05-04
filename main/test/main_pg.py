@@ -4,25 +4,11 @@ import ultrasonic_sensor as uls
 import thres_img as thres
 import wrap_img as wapt
 import histogram as hist
-import RPi.GPIO as GPIO
+
 import time
 
-GPIO.setmode(GPIO.BOARD)
-
-# Define the motor pins
-IN1 = 31
-IN2 = 33
-IN3 = 35
-IN4 = 37
-#ledLft = 
 curveList = []
 avgVal=10
-
-# Set the motor pins as output
-GPIO.setup(IN1, GPIO.OUT)
-GPIO.setup(IN2, GPIO.OUT)
-GPIO.setup(IN3, GPIO.OUT)
-GPIO.setup(IN4, GPIO.OUT)
 
 def getcurve(img,display=1):
     
